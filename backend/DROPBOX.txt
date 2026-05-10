@@ -1,0 +1,30 @@
+
+  const [mealPlan, setMealPlan] = useState({
+  "Breakfast": {
+    "Calories": 600,
+    "Carbs": 85,
+    "Fat": 20,
+    "Fibre": 25,
+    "Name": "Oatmeal with Almond Butter and Berries", //TEMP
+    "Protein": 20,
+    "Recipe": "Cook 1 cup of oats in water and stir in two tablespoons of almond butter and a cup of fresh blueberries." //TEMP
+  },
+  "Dinner": {
+    "Calories": 700,
+    "Carbs": 65,
+    "Fat": 30,
+    "Name": "Baked Salmon with Roasted Sweet Potatoes and Broccoli",  //TEMP
+    "Protein": 45,
+    "Fibre": 27,
+    "Recipe": "Bake a 6-ounce salmon fillet alongside diced sweet potatoes and broccoli florets drizzled with olive oil and seasoned with herbs."  //TEMP
+  },
+  "Lunch": {
+    "Calories": 700,
+    "Carbs": 70,
+    "Fat": 25,
+    "Name": "Grilled Chicken and Quinoa Salad",  //TEMP
+    "Protein": 50,
+    "Fibre": 26,
+    "Recipe": "Toss 6 ounces of grilled chicken breast with 1 cup of cooked quinoa, mixed greens, cherry tomatoes, and a tablespoon of olive oil dressing."  //TEMP
+  }
+})
