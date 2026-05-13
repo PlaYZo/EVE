@@ -30,26 +30,6 @@ app.use(express.static('public'));
 app.use(express.json()); // Allow server to read JSON data from the website
 
 // 3. Create the API endpoint to receive messages from the website
-app.post('/api/send', (req, res) => {
-    const textToSend = req.body.text;
-    
-    if (textToSend) {
-        // Send the text to the Arduino, adding a newline character at the end
-        // so the Arduino knows the message is finished.
-        serialPort.write(textToSend + '\n', (err) => {
-            if (err) {
-                console.log('Error writing to serial port: ', err.message);
-                res.status(500).send('Failed to send');
-            } else {
-                console.log(`Sent to LCD: ${textToSend}`);
-                res.status(200).send('Sent successfully');
-            }
-        });
-    } else {
-        res.status(400).send('No text provided');
-    }
-});
-
 app.post('/api/data', (req, res) => {
     const dataArray = req.body; 
     const textToSend = Object.values(dataArray).join(' | ');
